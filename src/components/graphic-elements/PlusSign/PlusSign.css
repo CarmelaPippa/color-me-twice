@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 400px) {
+@media (max-width: 400px) {
   .plus {
     top: 45.5%;
   }

@@ -4,10 +4,11 @@ import chroma from "chroma-js";
 import "./Button.css";
 function Button() {
   const [buttonText, setButtonText] = useState("START");
-  // eslint-disable-next-line no-unused-vars
   const [currentSection, setCurrentSection] = useState(1);
+
   const { mixColors, setMixColors, setColor, resetToggles } =
     useContext(Context);
+
   const handleOnClick = () => {
     const header = document.querySelector(".header");
     // Scroll to the next section
@@ -37,7 +38,7 @@ function Button() {
         }
         return nextSection;
       }
-      return prevSection; // Return the current section if the next section doesn't exist
+      return currentSection; // Return the current section if the next section doesn't exist
     });
   };
 
@@ -47,4 +48,5 @@ function Button() {
     </button>
   );
 }
+
 export default Button;
