@@ -4,6 +4,7 @@ import chroma from "chroma-js";
 import "./Button.css";
 function Button() {
   const [buttonText, setButtonText] = useState("START");
+  // eslint-disable-next-line no-unused-vars
   const [currentSection, setCurrentSection] = useState(1);
   const { mixColors, setMixColors, setColor, resetToggles } =
     useContext(Context);
@@ -22,7 +23,7 @@ function Button() {
           setButtonText("START");
           setColor("#FFFFFF");
           resetToggles();
-          const timeoutId = setTimeout(() => {
+          setTimeout(() => {
             setMixColors({ one: "#000000", two: "#FFFFFF" });
           }, 1000);
           return nextSection;
